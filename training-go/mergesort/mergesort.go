@@ -19,30 +19,31 @@ func MergeSort(arr []int) []int {
 func merge(first, second []int) []int {
 	mergedArr := make([]int, len(first)+len(second))
 
-	firstPivot, secondPivot, mergePivot := 0, 0, 0
+	firstIndex, secondIndex := 0, 0
 
-	for ; firstPivot < len(first) && secondPivot < len(second); {
-		if first[firstPivot] <= second[secondPivot] {
-			mergedArr[mergePivot] = first[firstPivot]
-			firstPivot++
-			mergePivot++
-		} else {
-			mergedArr[mergePivot] = second[secondPivot]
-			secondPivot++
-			mergePivot++
+	for mergeIndex := 0; mergeIndex < len(mergedArr); mergeIndex ++ {
+
+		firstHasMore := firstIndex < len(first)
+		secondHasMore := secondIndex < len(second)
+
+		if firstHasMore && secondHasMore {
+
+			if first[firstIndex] <= second[secondIndex] {
+				mergedArr[mergeIndex] = first[firstIndex]
+				firstIndex++
+			} else {
+				mergedArr[mergeIndex] = second[secondIndex]
+				secondIndex++
+			}
+
+		} else if firstHasMore {
+			mergedArr[mergeIndex] = first[firstIndex]
+			firstIndex++
+
+		} else if secondHasMore {
+			mergedArr[mergeIndex] = second[secondIndex]
+			secondIndex++
 		}
-	}
-
-	for ; firstPivot < len(first); {
-		mergedArr[mergePivot] = first[firstPivot]
-		firstPivot++
-		mergePivot++
-	}
-
-	for ; secondPivot < len(second); {
-		mergedArr[mergePivot] = second[secondPivot]
-		secondPivot++
-		mergePivot++
 	}
 
 	return mergedArr

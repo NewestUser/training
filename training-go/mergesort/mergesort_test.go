@@ -20,12 +20,10 @@ func TestMergeSort(t *testing.T) {
 	}
 
 	for _, s := range scenarios {
-
 		got := MergeSort(s.unsorted)
 
 		if !reflect.DeepEqual(got, s.sorted) {
 			t.Fatalf("\ngot : %v\nwant: %v", got, s.sorted)
 		}
-
 	}
 }
