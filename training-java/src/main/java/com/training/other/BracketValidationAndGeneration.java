@@ -4,7 +4,7 @@ import java.util.*;
 
 class BracketValidationAndGeneration {
 
-    private static Map<Character, Character> bracketPairs = new HashMap<Character, Character>() {{
+    private static final Map<Character, Character> bracketPairs = new HashMap<>() {{
         put('{', '}');
         put('[', ']');
         put('(', ')');
@@ -71,7 +71,6 @@ class BracketValidationAndGeneration {
     }
 
     private static boolean isOfSameType(Character openingBracket, Character closingBracket) {
-
         Character character = bracketPairs.get(openingBracket);
 
         return closingBracket.equals(character);

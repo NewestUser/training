@@ -16,22 +16,17 @@ class Permutation {
      * @return list of resulting permutations.
      */
     static List<String> uniquePermutation(char... chars) {
-
         return uniquePermutation(new ArrayList<>(), chars, 0);
     }
 
     private static List<String> uniquePermutation(List<String> permutations, char[] chars, int pivotIndex) {
-
         if (chars.length == pivotIndex) {
-
             permutations.add(String.valueOf(chars));
-
             return permutations;
         }
 
         for (int i = pivotIndex; i < chars.length; i++) {
             char[] swap = swap(chars, i, pivotIndex);
-
             uniquePermutation(permutations, swap, pivotIndex + 1);
         }
 
@@ -44,7 +39,6 @@ class Permutation {
      * recursive call of {@link Permutation#uniquePermutation(char...)}.
      */
     private static char[] swap(char[] string, int first, int second) {
-
         char[] chars = Arrays.copyOf(string, string.length);
 
         char a = chars[first];

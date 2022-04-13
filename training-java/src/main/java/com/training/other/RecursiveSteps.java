@@ -10,18 +10,14 @@ package com.training.other;
  *
  */
 class RecursiveSteps {
-
     static int numOfWaysGivenOneOrTwoSteps(int stairs) {
-
         if (stairs <= 1) {
             return 1;
         }
-
         return numOfWaysGivenOneOrTwoSteps(stairs - 2) + numOfWaysGivenOneOrTwoSteps(stairs - 1);
     }
 
     static int numOfBottomUpWaysGivenOneOrTwoSteps(int stairs) {
-
         if (stairs <= 1) {
             return 1;
         }
@@ -38,7 +34,6 @@ class RecursiveSteps {
     }
 
     static int numOfWaysGivenSteps(int stairs, int[] steps) {
-
         if (stairs == 0 || stairs == 1) {
             return 1;
         }

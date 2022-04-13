@@ -27,7 +27,7 @@ import java.util.Set;
  */
 class SimilarSentences {
 
-    private static Map<String, List<Integer>> INDEXED_SENTENCES = new HashMap<>();
+    private static final Map<String, List<Integer>> INDEXED_SENTENCES = new HashMap<>();
     private static Integer THRESHOLD;
 
     /**
@@ -37,7 +37,6 @@ class SimilarSentences {
      * @param threshold definition of similarity.
      */
     static void init(String[] text, Integer threshold) {
-
         THRESHOLD = threshold;
 
         for (int i = 0; i < text.length; i++) {

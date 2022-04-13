@@ -39,8 +39,8 @@ public class FirstBadVersion {
     }
 
     public int firstBadVersion(int n) {
-//        return checkRangeRecursive(1, n);
-        return checkRangeIterative(1, n);
+        return checkRangeRecursive(1, n);
+//        return checkRangeIterative(1, n);
     }
 
     private int checkRangeRecursive(long start, long end) {

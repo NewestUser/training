@@ -9,7 +9,6 @@ class Multiples {
      * @return sum of multiples.
      */
     static int of3or5(int i) {
-
         int sum = 0;
         while (i >= 3) {
             i--;

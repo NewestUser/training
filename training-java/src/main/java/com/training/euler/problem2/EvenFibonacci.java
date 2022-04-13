@@ -3,7 +3,6 @@ package com.training.euler.problem2;
 class EvenFibonacci {
 
     static int fibonacci(int i) {
-
         if (i <= 0) {
             return 0;
         }
@@ -16,7 +15,6 @@ class EvenFibonacci {
     }
 
     static int closestFibonacciInput(int fibonacciTerm) {
-
         int i = 0;
         while (true) {
 
@@ -26,18 +24,15 @@ class EvenFibonacci {
             }
             i++;
         }
-
     }
 
     static int sumOfEvenFibonacci(int i) {
-
         int sum = 0;
         for (int j = 0; j <= i; j++) {
             int fibonacci = fibonacci(j);
 
             sum += fibonacci % 2 == 0 ? fibonacci : 0;
         }
-
 
         return sum;
     }
@@ -47,7 +42,6 @@ class EvenFibonacci {
     }
 
     private static int sumOfFibonacci(int i, int sum) {
-
         if (i == 0) {
             return sum;
         }

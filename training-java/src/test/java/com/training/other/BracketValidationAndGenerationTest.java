@@ -12,7 +12,7 @@ public class BracketValidationAndGenerationTest {
 
     @Test
     public void validBracketSyntax() {
-        List<String> validBracesSyntax = new ArrayList<String>() {{
+        List<String> validBracesSyntax = new ArrayList<>() {{
             add("{}");
             add("{}[]");
             add("{}[]()");
@@ -27,7 +27,7 @@ public class BracketValidationAndGenerationTest {
 
     @Test
     public void invalidBracketSyntax() {
-        List<String> validBracesSyntax = new ArrayList<String>() {{
+        List<String> validBracesSyntax = new ArrayList<>() {{
             add("{");
             add("}{");
             add("{]");

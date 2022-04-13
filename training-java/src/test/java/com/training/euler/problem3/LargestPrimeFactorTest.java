@@ -6,7 +6,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class LargestPrimeFactorTest {
-
     @Ignore // TODO solve this problem
     @Test
     public void largestPrimeFactor() {

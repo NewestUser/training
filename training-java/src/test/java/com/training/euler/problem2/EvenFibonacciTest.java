@@ -37,7 +37,6 @@ public class EvenFibonacciTest {
 
     @Test
     public void sumOfEvenFibonacciNumbers() {
-
         assertEquals(10, EvenFibonacci.sumOfEvenFibonacci(6));
         assertEquals(44, EvenFibonacci.sumOfEvenFibonacci(9));
         assertEquals(4_613_732, EvenFibonacci.sumOfEvenFibonacci(33));
