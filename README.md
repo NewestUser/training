@@ -8,7 +8,7 @@ The content here can be used for training and educational purposes.
 
 - [x] [Sum of multiples](./training-java/src/main/java/com/training/euler/problem1/Multiples.java)
 - [x] [Even Fibonacci](./training-java/src/main/java/com/training/euler/problem2/EvenFibonacci.java)
-- [ ] [Largest Prime Factor ](./training-java/src/main/java/com/training/euler/problem3/LargestPrimeFactor.java)
+- [x] [Largest Prime Factor](./training-java/src/main/java/com/training/euler/problem3/LargestPrimeFactor.java)
 - [x] [First Bad Version](./training-java/src/main/java/com/training/leetcode/problem1/FirstBadVersion.java)
 - [ ] [Perfect Squares](./training-java/src/main/java/com/training/leetcode/problem2/PerfectSquares.java)
 - [x] [Search 2D Matrix](./training-java/src/main/java/com/training/leetcode/problem3/Search2DMatrix.java)
@@ -18,3 +18,4 @@ The content here can be used for training and educational purposes.
 - [x] [Selection Sort](./training-java/src/main/java/com/training/other/SelectionSort.java)
 - [x] [Merge Sort](./training-go/mergesort/mergesort.go)
 - [x] [Similar Sentences](./training-java/src/main/java/com/training/other/SimilarSentences.java)
+- [x] [Reverse Integer](./training-java/src/main/java/com/training/leetcode/problem4/ReverseInteger.java)

@@ -2,25 +2,22 @@ package com.training.euler.problem3;
 
 class LargestPrimeFactor {
 
-    static long largestPrimeFactorOf(long i) {
-        if (i == 1) {
+    static long largestPrimeFactorOf(long value) {
+        if (value < 2) {
             return 1;
         }
+        long factor = 2;
+        long quotient = value;
 
-        long largestPrime = i;
-        while (largestPrime >= 0) {
-            long reminder = i % --largestPrime;
-
-            if (largestPrime == 1) {
-                break;
+        while (factor < quotient) {
+            if (quotient % factor != 0) {
+                factor++;
+                continue;
             }
 
-            if (reminder == 0) {
-                return largestPrime;
-            }
+            quotient = quotient / factor;
         }
 
-        return i;
+        return factor;
     }
-
 }
