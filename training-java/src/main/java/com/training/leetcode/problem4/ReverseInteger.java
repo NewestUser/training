@@ -32,7 +32,7 @@ public class ReverseInteger {
             int remainder = quotient % 10;
             int tmpReversed = reversed * 10 + remainder;
             quotient = quotient / 10;
-            if (reversed != (tmpReversed - remainder) / 10) { // overflow check
+            if (tmpReversed < 0 || reversed != (tmpReversed - remainder) / 10) { // overflow check
                 return 0;
             }
             reversed = tmpReversed;

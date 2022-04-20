@@ -19,3 +19,4 @@ The content here can be used for training and educational purposes.
 - [x] [Merge Sort](./training-go/mergesort/mergesort.go)
 - [x] [Similar Sentences](./training-java/src/main/java/com/training/other/SimilarSentences.java)
 - [x] [Reverse Integer](./training-java/src/main/java/com/training/leetcode/problem4/ReverseInteger.java)
+- [x] [String to Integer (atoi)](./training-java/src/main/java/com/training/leetcode/problem5/StringToInteger.java)
