@@ -2,6 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- HEALTH CONNECT -->
+    <queries>
+        <package android:name="com.google.android.apps.healthdata" />
+
+        <!--
+             This is required such that the app can query and resolve packages that have written
+             Health Connect data, and obtain their friendly App Name and Icon to show for data
+             attribution in the app
+        -->
+        <intent>
+            <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.health.READ_WEIGHT"/>
+    <uses-permission android:name="android.permission.health.WRITE_WEIGHT"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +29,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+
+
+        <!-- Activity to show rationale of Health Connect permissions -->
+        <activity
+            android:name=".RationalActivity"
+            android:exported="true">
+
+            <!--
+              The app needs to handle this intent and display an appropriate privacy policy
+              explaining how the user's data will be used and handled.
+
+              This intent is sent to the app when the user clicks on the "privacy policy" link
+              in the Health Connect permissions dialog.
+            -->
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>
+        </activity>
+
+        <!-- For versions starting Android 14, create an activity alias to show the rationale
+         of Health Connect permissions once users click the privacy policy link. -->
+        <activity-alias
+            android:name=".RationalActivity"
+            android:exported="true"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE"
+            android:targetActivity=".RationalActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS" />
+            </intent-filter>
+        </activity-alias>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
